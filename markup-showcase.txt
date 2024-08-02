@@ -1,0 +1,10 @@
+#header# fontSize 30px
+#subheader# fontSize 20px
+
+"Showcase" style header
+"What can it do?" style subheader
+"It can transpile this syntax into html."
+
+"Is it all?" style subheader
+You can also use dolar sign to end text. $
+Like this. $

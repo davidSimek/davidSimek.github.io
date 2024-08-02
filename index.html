@@ -1,81 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
+        :root {
+            --black: #04151F;
+            --accent: #1E4844;
+            --white: #F8EEDD;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 400;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
+
         header {
-            background: #4CAF50;
-            color: white;
+            background: var(--accent);
+            color: var(--white);
             padding: 1rem;
             text-align: center;
         }
+
         nav {
             display: flex;
             justify-content: center;
-            background: #333;
+            background: var(--black);
         }
+
         nav a {
-            color: white;
+            color: var(--white);
             padding: 1rem;
             text-decoration: none;
             text-align: center;
         }
+
         nav a:hover {
-            background: #4CAF50;
+            background: var(--accent);
+            transition: background-color 0.5s ease;
         }
+
         section {
             padding: 2rem;
         }
+
+
         footer {
-            background: #333;
-            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px;
+            background: var(--black);
+            color: var(--white);
             text-align: center;
-            padding: 1rem;
+            padding: 3px;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
+
+        footer a {
+            transition: color 0.5s ease;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            #spacer {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            #spacer p {
+                margin: 5px 0;
+            }
+        }
+
+
+        #cv iframe {
+            margin-top: 1rem;
+            width: 100%;
+            aspect-ratio: 2/3;
+        }
+
+        #cv a {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #spacer {
+            color: transparent;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px;
+            background: var(--black);
+            color: transparent;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .project {
+            background: #f9f9f9;
+            padding: 0rem;
+            border-radius: 5px;
+            margin-bottom: 0rem;
+        }
+
+
+        .project h3 {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 7px 0px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project h3:hover {
+            background-color: var(--black);
+        }
+
+
+
+        .project-content {
+            display: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .project-content.show {
+            display: block;
+            max-height: 1000px;
+        }
+
+        .project-content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .project-code {
+            background: var(--black);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Your Name</h1>
-</header>
+    <header>
+        <h1>David Šimek</h1>
+    </header>
 
-<nav>
-    <a href="#cv">CV</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-</nav>
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+    </nav>
 
-<section id="cv">
-    <h2>CV</h2>
-    <p>Placeholder for your CV content.</p>
-</section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Placeholder for your skills content.</p>
+    </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <p>Placeholder for your skills content.</p>
-</section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">
+                c debug alloc
+            </h3>
+            <div class="project-content">
+                <a href="https://github.com/davidSimek/debug_alloc" target="_blank">
+                    Github Link&nbsp;<i class="fa fa-github"></i>
+                </a>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <p>Placeholder for your projects content.</p>
-</section>
+                <h4>C memory tracking library</h4>
+                <p>The Debug Allocator Library (debug_alloc) is a lightweight C library for debugging memory allocation
+                    in C programs. It provides functions for tracking memory allocation and deallocation, as well as
+                    debugging information for easier identification of memory-related issues.</p>
+                <p>header file/api:</p>
+                <div class="project-code">
+                    <script
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fdebug_alloc%2Fblob%2Fmaster%2Fsrc%2Fdebug_alloc.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">
+                Markup Interactive Lanugage Format (high school graduation project)
+            </h3>
+            <div class="project-content">
+                <a href="https://github.com/davidSimek/MarkupInteractiveLanguageFormat" target="_blank">
+                    Github Link&nbsp;<i class="fa fa-github"></i>
+                </a>
 
-<footer>
-    <p>Contact Information: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-</footer>
+                <h4>C memory tracking library</h4>
+                <p>Simple markup language usable by non-developers written in Haskell.</p>
+                <p>project contains: transpiler to html, live preview system and C api.</p>
+                <p>header file/api:</p>
+                <div class="project-code">
+                    <script
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fdebug_alloc%2Fblob%2Fmaster%2Fsrc%2Fdebug_alloc.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv">
+        <h2>CV</h2>
+        <a href="David Šimek.pdf" download>Download CV</a>
+        <iframe src="David Šimek.pdf" title="CV"></iframe>
+    </section>
+
+    <section id="spacer">
+        <p>&nbsp;&nbsp;<i class="fa fa-envelope"></i>: <a
+                href="mailto:simek.david@outlook.cz">simek.david@outlook.cz</a>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;<i class="fa fa-phone"></i> <a href="tel:+420-739-038-083">+420 739 038 083</a>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;<i class="fa fa-github"></i> <a href="https://github.com/davidSimek">davidSimek</a>&nbsp;&nbsp;
+        </p>
+        <p>&nbsp;&nbsp;<i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;<a
+                href="https://www.linkedin.com/in/david-%C5%A1imek-032724211/">David
+                Šimek</a>
+        </p>
+    </section>
+
+
+    <footer>
+        <p>&nbsp;&nbsp;<i class="fa fa-envelope"></i> <a
+                href="mailto:simek.david@outlook.cz">simek.david@outlook.cz</a>&nbsp;
+        </p>
+        <p>&nbsp;&nbsp;<i class="fa fa-phone"></i> <a href="tel:+420-739-038-083">+420 739 038 083</a>&nbsp;</p>
+        <p>&nbsp;&nbsp;<i class="fa fa-github"></i> <a href="https://github.com/davidSimek">davidSimek</a>&nbsp;</p>
+        <p>&nbsp;&nbsp;<i class="fa fa-linkedin-square"></i> <a
+                href="https://www.linkedin.com/in/david-%C5%A1imek-032724211/">David
+                Šimek</a></p>
+    </footer>
+
+
+    <script>
+        function toggleProject(element) {
+            var content = element.nextElementSibling;
+            if (content.classList.contains("show")) {
+                content.classList.remove("show");
+                setTimeout(function () {
+                    content.style.display = "none";
+                }, 500); // Match this timeout with your transition duration
+            } else {
+                content.style.display = "block";
+                setTimeout(function () {
+                    content.classList.add("show");
+                }, 10); // Small delay to allow display change to take effect
+            }
+        }
+
+    </script>
 
 </body>
-</html>
 
+</html>
