@@ -166,7 +166,7 @@
             display: none;
             overflow: hidden;
             max-height: 0;
-            transition: max-height 0.5s ease-out;
+            transition: max-height 1s ease-out;
         }
 
         .project-content.show {
@@ -191,14 +191,59 @@
             overflow-x: auto;
         }
 
-        #skills h4 {
-            margin: 0;
-            color: var(--accent);
+
+        #skills h2 {
+            margin-bottom: 20px;
         }
 
-        #skills li {
-            margin: 0;
-            padding: 0;
+        .skill {
+            background: #f9f9f9;
+            padding: 0rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .skill-header {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 7px 0px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill-header:hover {
+            background-color: var(--black);
+        }
+
+        .skill-content {
+            display: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 1s ease-out;
+        }
+
+        .skill-content.show {
+            display: block;
+            max-height: 30000px;
+        }
+
+        .skill-content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .skill a:hover {
+            text-decoration: underline;
+        }
+
+        .skill-code {
+            background: var(--black);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
         }
     </style>
 </head>
@@ -218,58 +263,81 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>
-                <h4>Programming languages I know well</h4>
-                <p>Most comfortable I feel in C. It is because it is simple, explicit and statically typed
-                    language. I really like how code reads and how it works.</p>
-                <p>I am also able to effectively work with
-                    C++, both because I learned it before C and also now, when I know C, it feels even easier.</p>
-                <p>Java is
-                    also one of these languages, because I learned it in school and had to learn it to have good grades.
-                    For me it is not the best language in the world, but is really interesting in some aspects and has
-                    special place in my hearth.</p>
-            </li>
-            <li>
-                <h4>Programming languages I know a bit</h4>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">Programming languages I know well</h3>
+            <div class="skill-content">
+                <p>Most comfortable I feel in C. It is because it is simple, explicit and statically typed language. I
+                    really like how code reads and how it works.</p>
+                <p>I am also able to effectively work with C++, both because I learned it before C and also now, when I
+                    know C, it feels even easier.</p>
+                <p>Java is also one of these languages, because I learned it in school and had to learn it to have good
+                    grades. For me, it is not the best language in the world, but is really interesting in some aspects
+                    and has special place in my hearth.</p>
+            </div>
+        </div>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">Programming languages I know a bit</h3>
+            <div class="skill-content">
                 <p>There are some languages I know some parts of. These are Haskell, Fasm, Nasm, Js, php, C#, Rust and
-                    Fortran.
-                </p>
-                <p>C# is one I also learned in school, but never really liked it.
-                </p>
-                <p>Fasm and Nasm Are languages, which I played with to better undertand how c and generally memory
-                    management works works.</p>
+                    Fortran.</p>
+                <p>C# is one I also learned in school, but never really liked it.</p>
+                <p>Fasm and Nasm Are languages, which I played with to better understand how c and generally memory
+                    management works.</p>
                 <p>I feel like everyone should know at least a bit about php and js, because they are still ones of the
                     most used ones. I always thought it is interesting how close they are under the hood even though
-                    they have completely
-                    different purpose.</p>
+                    they have completely different purpose.</p>
                 <p>Rust, Fortran and Haskell are languages I learned just for fun and to understand foreign concepts.
-                    All of those three have some really interesting features which helped me to get broader view on
-                    some problems and how to solve them.
-                </p>
-            </li>
-            <li>
-                <h4>OS</h4>
+                    All of those three have some really interesting features which helped me to get broader view on some
+                    problems and how to solve them.</p>
+            </div>
+        </div>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">OS</h3>
+            <div class="skill-content">
                 <p>Void Linux with i3 as my daily driver, so I know how to work with Linux.</p>
                 <p>I have basic knowledge of windows administration from school and previous use of Windows.</p>
-            </li>
-            <li>
-                <h4>Networking</h4>
-                <p>Networking classes in high school made me interested in networking. I like to read
-                    protocol documentation and find out why we use them and how they work.</p>
-            </li>
-            <li>
-                <h4>Development tools</h4>
-                <p>I like to keep my toolchain pretty basic, so it usually consist of nvim, gcc, make and github. I have
+            </div>
+        </div>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">Networking</h3>
+            <div class="skill-content">
+                <p>Networking classes in high school made me interested in networking. I like to read protocol
+                    documentation and find out why we use them and how they work.</p>
+            </div>
+        </div>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">Development tools</h3>
+            <div class="skill-content">
+                <p>I like to keep my toolchain pretty basic, so it usually consists of nvim, gcc, make and github. I
+                    have
                     experience with Docker and Gitlab from previous job and project we worked on with my friend.</p>
-            </li>
-            <li>
-                <h4>Web development!</h4>
+            </div>
+        </div>
+        <div class="skill">
+            <h3 class="skill-header" onclick="toggleSkill(this)">Web development</h3>
+            <div class="skill-content">
                 <p>I don't like web development, simply because I don't enjoy it. I know most used parts of html and
                     css.</p>
-            </li>
-        </ul>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function toggleSkill(element) {
+            var content = element.nextElementSibling;
+            if (content.classList.contains("show")) {
+                content.classList.remove("show");
+                setTimeout(function () {
+                    content.style.display = "none";
+                }, 500); // Match this timeout with your transition duration
+            } else {
+                content.style.display = "block";
+                setTimeout(function () {
+                    content.classList.add("show");
+                }, 10); // Small delay to allow display change to take effect
+            }
+        }
+    </script>
 
     <section id="projects">
         <h2>Projects</h2>
@@ -302,10 +370,10 @@
                     Github Link&nbsp;<i class="fa fa-github"></i>
                 </a>
 
-                <h4>Haskell implementation of my makup language as high school graduation project</h4>
+                <h4>Haskell implementation of my markup language as high school graduation project</h4>
                 <p>Simple markup language usable by non-developers.</p>
-                <p>project contains: transpiler to html, live preview system and C api.</p>
-                <p>you can write something like this:</p>
+                <p>Project contains transpiler to html, live preview system and C api.</p>
+                <p>You can write something like this:</p>
                 <div class="project-code">
                     <script
                         src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FdavidSimek.github.io%2Fblob%2Fmain%2Fmarkup-showcase.txt&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
@@ -348,7 +416,7 @@
                 </a>
 
                 <h4>Implementation of simple problems in few languages</h4>
-                <p>I implemented some small axercises in:</p>
+                <p>I implemented some small exercises in:</p>
                 C,
                 C++,
                 Fortran,
@@ -357,8 +425,8 @@
                 Rust,
                 Nasm x86_64 Linux,
                 Fasm x86_64 Linux,
-                <p>For example here is implementation of random number generator in fortran. It generates random number.
-                    and prints it is ascii art.</p>
+                <p>For example, here is implementation of random number generator in fortran. It generates random
+                    number and prints it is ascii art.</p>
                 <div class="project-code">
                     <script
                         src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FMLI%2Fblob%2Fmaster%2FFortran%2F02%2Fmain.f90&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
