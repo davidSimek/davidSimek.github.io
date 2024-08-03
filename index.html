@@ -32,8 +32,12 @@
         header {
             background: var(--accent);
             color: var(--white);
-            padding: 0.2rem;
+            padding: 1rem;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0rem;
         }
 
         nav {
@@ -121,7 +125,6 @@
             padding: 1rem;
             margin-bottom: 2rem;
             text-decoration: none;
-            border-radius: 5px;
         }
 
         #spacer {
@@ -143,7 +146,6 @@
         .project {
             background: #f9f9f9;
             padding: 0rem;
-            border-radius: 5px;
             margin-bottom: 0rem;
         }
 
@@ -152,7 +154,6 @@
             background-color: var(--accent);
             color: var(--white);
             padding: 1rem;
-            border-radius: 5px;
             margin: 7px 0px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -190,27 +191,24 @@
             background: transparent;
             color: var(--white);
             padding: 1rem;
-            border-radius: 5px;
             overflow-x: auto;
         }
 
 
         #skills h2 {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
 
         .skill {
             background: #f9f9f9;
             padding: 0rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .skill-header {
             background-color: var(--accent);
             color: var(--white);
             padding: 1rem;
-            border-radius: 5px;
             margin: 7px 0px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -246,7 +244,6 @@
             background: var(--black);
             color: var(--white);
             padding: 1rem;
-            border-radius: 5px;
             overflow-x: auto;
         }
     </style>
@@ -256,6 +253,7 @@
 
     <header>
         <h1>David Šimek</h1>
+        software developer
     </header>
 
     <nav>
@@ -268,7 +266,7 @@
     <section id="skills">
         <h2>Skills</h2>
         <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Programming languages I know well</h3>
+            <h3 class="skill-header" onclick="toggleSkill(this)">Languages I know well (C, C++, Java)</h3>
             <div class="skill-content">
                 <p>Most comfortable I feel in C. It is because it is simple, explicit and statically typed language. I
                     really like how code reads and how it works.</p>
@@ -280,7 +278,8 @@
             </div>
         </div>
         <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Programming languages I know a bit</h3>
+            <h3 class="skill-header" onclick="toggleSkill(this)">Languages I know a bit (Haskell, Fasm,
+                Nasm, Js, php, C#, Rust, Fortran)</h3>
             <div class="skill-content">
                 <p>There are some languages I know some parts of. These are Haskell, Fasm, Nasm, Js, php, C#, Rust and
                     Fortran.</p>
