@@ -13,9 +13,9 @@
 
     <style>
         :root {
-            --black: #04151F;
-            --accent: #1E4844;
-            --white: #F8EEDD;
+            --black: #1D342B;
+            --accent: #2274A5;
+            --white: #FFF2EB;
         }
 
         body {
@@ -30,7 +30,7 @@
         header {
             background: var(--accent);
             color: var(--white);
-            padding: 1rem;
+            padding: 0.2rem;
             text-align: center;
         }
 
@@ -81,7 +81,7 @@
         }
 
         footer a:hover {
-            color: blue;
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -171,7 +171,7 @@
 
         .project-content.show {
             display: block;
-            max-height: 1500px;
+            max-height: 30000px;
         }
 
         .project-content a {
@@ -190,6 +190,16 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+
+        #skills h4 {
+            margin: 0;
+            color: var(--accent);
+        }
+
+        #skills li {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
@@ -205,16 +215,67 @@
         <a href="#cv">CV</a>
     </nav>
 
+
     <section id="skills">
         <h2>Skills</h2>
-        <p>Placeholder for your skills content.</p>
+        <ul>
+            <li>
+                <h4>Programming languages I know well</h4>
+                <p>Most comfortable I feel in C. It is because it is simple, explicit and statically typed
+                    language. I really like how code reads and how it works.</p>
+                <p>I am also able to effectively work with
+                    C++, both because I learned it before C and also now, when I know C, it feels even easier.</p>
+                <p>Java is
+                    also one of these languages, because I learned it in school and had to learn it to have good grades.
+                    For me it is not the best language in the world, but is really interesting in some aspects and has
+                    special place in my hearth.</p>
+            </li>
+            <li>
+                <h4>Programming languages I know a bit</h4>
+                <p>There are some languages I know some parts of. These are Haskell, Fasm, Nasm, Js, php, C#, Rust and
+                    Fortran.
+                </p>
+                <p>C# is one I also learned in school, but never really liked it.
+                </p>
+                <p>Fasm and Nasm Are languages, which I played with to better undertand how c and generally memory
+                    management works works.</p>
+                <p>I feel like everyone should know at least a bit about php and js, because they are still ones of the
+                    most used ones. I always thought it is interesting how close they are under the hood even though
+                    they have completely
+                    different purpose.</p>
+                <p>Rust, Fortran and Haskell are languages I learned just for fun and to understand foreign concepts.
+                    All of those three have some really interesting features which helped me to get broader view on
+                    some problems and how to solve them.
+                </p>
+            </li>
+            <li>
+                <h4>OS</h4>
+                <p>Void Linux with i3 as my daily driver, so I know how to work with Linux.</p>
+                <p>I have basic knowledge of windows administration from school and previous use of Windows.</p>
+            </li>
+            <li>
+                <h4>Networking</h4>
+                <p>Networking classes in high school made me interested in networking. I like to read
+                    protocol documentation and find out why we use them and how they work.</p>
+            </li>
+            <li>
+                <h4>Development tools</h4>
+                <p>I like to keep my toolchain pretty basic, so it usually consist of nvim, gcc, make and github. I have
+                    experience with Docker and Gitlab from previous job and project we worked on with my friend.</p>
+            </li>
+            <li>
+                <h4>Web development!</h4>
+                <p>I don't like web development, simply because I don't enjoy it. I know most used parts of html and
+                    css.</p>
+            </li>
+        </ul>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3 onclick="toggleProject(this)">
-                c debug alloc
+                c debugging allocator
             </h3>
             <div class="project-content">
                 <a href="https://github.com/davidSimek/debug_alloc" target="_blank">
@@ -234,14 +295,14 @@
         </div>
         <div class="project">
             <h3 onclick="toggleProject(this)">
-                Markup Interactive Lanugage Format (high school graduation project)
+                Markup Interactive Lanugage Format
             </h3>
             <div class="project-content">
                 <a href="https://github.com/davidSimek/MarkupInteractiveLanguageFormat" target="_blank">
                     Github Link&nbsp;<i class="fa fa-github"></i>
                 </a>
 
-                <h4>Haskell implementation of my makup language</h4>
+                <h4>Haskell implementation of my makup language as high school graduation project</h4>
                 <p>Simple markup language usable by non-developers.</p>
                 <p>project contains: transpiler to html, live preview system and C api.</p>
                 <p>you can write something like this:</p>
@@ -275,6 +336,57 @@
                     style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 15px Arial, sans-serif;">
                     Like this.</div>
 
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">
+                MLI
+            </h3>
+            <div class="project-content">
+                <a href="https://github.com/davidSimek/MLI" target="_blank">
+                    Github Link&nbsp;<i class="fa fa-github"></i>
+                </a>
+
+                <h4>Implementation of simple problems in few languages</h4>
+                <p>I implemented some small axercises in:</p>
+                C,
+                C++,
+                Fortran,
+                Java,
+                Haskell,
+                Rust,
+                Nasm x86_64 Linux,
+                Fasm x86_64 Linux,
+                <p>For example here is implementation of random number generator in fortran. It generates random number.
+                    and prints it is ascii art.</p>
+                <div class="project-code">
+                    <script
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FMLI%2Fblob%2Fmaster%2FFortran%2F02%2Fmain.f90&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">
+                Simple C Windows/Linux http library
+            </h3>
+            <div class="project-content">
+                <a href="https://github.com/davidSimek/httpLibrary" target="_blank">
+                    Github Link&nbsp;<i class="fa fa-github"></i>
+                </a>
+
+                <h4>Implementation of http library for experimenting and learning.</h4>
+                This C library provides a simple and easy-to-use framework for creating HTTP servers, parsing requests,
+                and generating responses. The primary goal is to offer a lightweight solution for experimenting with
+                HTTP server while providing enough control for you to make it YOUR way. The library is designed to be
+                partly platform-independent, supporting both Linux and Windows environments. It has no dependencies on
+                external libraries beyond what is provided by the system by default. (libc/os api)</p>
+                <p>header file/api</p>
+                <div class="project-code">
+                    <script
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FhttpLibrary%2Fblob%2Fmaster%2Fsrc%2FhttpLibrary.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+                </div>
             </div>
         </div>
     </section>
