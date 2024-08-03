@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>David Šimek</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
@@ -167,7 +167,7 @@
 
         .project-content.show {
             display: block;
-            max-height: 1000px;
+            max-height: 1500px;
         }
 
         .project-content a {
@@ -237,14 +237,22 @@
                     Github Link&nbsp;<i class="fa fa-github"></i>
                 </a>
 
-                <h4>C memory tracking library</h4>
-                <p>Simple markup language usable by non-developers written in Haskell.</p>
+                <h4>Haskell implementation of my makup language</h4>
+                <p>Simple markup language usable by non-developers.</p>
                 <p>project contains: transpiler to html, live preview system and C api.</p>
-                <p>header file/api:</p>
+                <p>you can write something like this:</p>
                 <div class="project-code">
                     <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fdebug_alloc%2Fblob%2Fmaster%2Fsrc%2Fdebug_alloc.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FdavidSimek.github.io%2Fblob%2Fmain%2Fmarkup-showcase.txt&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
                 </div>
+                <p>and get out this:</p>
+                <div class="project-code">
+                    <script
+                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FdavidSimek.github.io%2Fblob%2Fmain%2Fhtml-showcase.html&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+                </div>
+                <p>which then looks like this:</p>
+                <iframe src="html-showcase.html" title="html-showcase" width=100% height=220px
+                    style="boreder: none;"></iframe>
             </div>
         </div>
     </section>
@@ -252,7 +260,15 @@
     <section id="cv">
         <h2>CV</h2>
         <a href="David Šimek.pdf" download>Download CV</a>
-        <iframe src="David Šimek.pdf" title="CV"></iframe>
+        <style>
+            .pdfobject-container {
+                height: auto;
+                border: none;
+            }
+        </style>
+        <div id="my-pdf"></div>
+        <script src="https://unpkg.com/pdfobject"></script>
+        <script>PDFObject.embed("David Šimek.pdf", "#my-pdf");</script>
     </section>
 
     <section id="spacer">
