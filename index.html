@@ -348,7 +348,34 @@
     </script>
 
     <section id="projects">
-        <h2>Projects</h2>
+      <h2>Projects</h2>
+          <div class="project">
+            <h3 onclick="toggleProject(this)">
+                Hal 0.009
+            </h3>
+            <div class="project-content">
+                <a href="https://github.com/davidSimek/hal0.009" target="_blank">
+                    Github Link&nbsp;<i class="fa fa-github"></i>
+                </a>
+
+                <h4>Virtual machine in C</h4>
+                <p>8-bit Virtual machine with its own instruction set and assembler.</p>
+		<p>Write code in my assembly language hasm.</p>
+		<div class="project-code">
+		  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Fshowcase.hasm&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+		</div>
+		<p>Assemble it.</p>
+		<div class="project-code">
+		  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Fassemble.sh&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+		</div>
+		<p>Run using virtual machine.</p>
+		<div class="project-code">
+		  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Frun.sh&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+		</div>
+		<p>You can see register dump after machine exits.<\p>
+		    
+	    </div>
+	</div>
         <div class="project">
             <h3 onclick="toggleProject(this)">
                 c debugging allocator
@@ -438,29 +465,6 @@
                 <div class="project-code">
                     <script
                         src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FMLI%2Fblob%2Fmaster%2FFortran%2F02%2Fmain.f90&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                Simple C Windows/Linux http library
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/httpLibrary" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>Implementation of http library for experimenting and learning.</h4>
-                This C library provides a simple and easy-to-use framework for creating HTTP servers, parsing requests,
-                and generating responses. The primary goal is to offer a lightweight solution for experimenting with
-                HTTP server while providing enough control for you to make it YOUR way. The library is designed to be
-                partly platform-independent, supporting both Linux and Windows environments. It has no dependencies on
-                external libraries beyond what is provided by the system by default. (libc/os api)</p>
-                <p>header file/api</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FhttpLibrary%2Fblob%2Fmaster%2Fsrc%2FhttpLibrary.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
                 </div>
             </div>
