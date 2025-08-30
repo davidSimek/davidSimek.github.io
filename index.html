@@ -1,545 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.148.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Music guide</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost/">
+  <meta property="og:site_name" content="Music guide">
+  <meta property="og:title" content="Music guide">
+  <meta property="og:description" content="What is this? This guide will teach you how to understand music concepts that will help you improvise and experiment with music creation using any instrument. I will use mostly guitar to showcase this, but it applies everywhere. We will talk about intervals, scales, chords, rhythm, composition and much more.
+Will will be using so called “western music theory”, which is probably 99% of music you ever heard. You don’t have to worry about this, but it is always nice to check other views on music.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost/logo.png">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Šimek</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost/logo.png">
+  <meta name="twitter:title" content="Music guide">
+  <meta name="twitter:description" content="What is this? This guide will teach you how to understand music concepts that will help you improvise and experiment with music creation using any instrument. I will use mostly guitar to showcase this, but it applies everywhere. We will talk about intervals, scales, chords, rhythm, composition and much more.
+Will will be using so called “western music theory”, which is probably 99% of music you ever heard. You don’t have to worry about this, but it is always nice to check other views on music.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Music guide">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Music guide"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "http:\/\/localhost\/","inLanguage": "en","author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": "This is my cool site","name": "Music guide"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-    <style>
-        :root {
-            --black: #1D342B;
-            --accent: #2274A5;
-            --white: #FFF2EB;
-        }
-
-        body {
-            font-family: "Roboto", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--accent);
-            color: var(--white);
-            padding: 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: var(--black);
-        }
-
-        nav a {
-            color: var(--white);
-            padding: 1rem;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background: var(--accent);
-            transition: background-color 0.5s ease;
-        }
-
-        section {
-            padding: 2rem;
-        }
-
-
-
-        footer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            /* Centers content horizontally */
-            align-items: center;
-            gap: 0px;
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 3px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer a {
-            transition: color 0.5s ease;
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            footer {
-                flex-direction: column;
-                padding: 12px;
-            }
-
-            footer p {
-                margin: 2px auto 2px auto;
-            }
-
-            #spacer {
-                flex-direction: column;
-                padding: 12px;
-            }
-
-            #spacer p {
-                margin: 2px auto;
-            }
-        }
-
-
-
-        #cv iframe {
-            margin-top: 1rem;
-            width: 100%;
-            aspect-ratio: 2/3;
-        }
-
-        #cv a {
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 1rem;
-            margin-bottom: 2rem;
-            text-decoration: none;
-        }
-
-        #spacer {
-            color: transparent;
-            background-color: var(--white);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0px;
-            background: var(--black);
-            color: transparent;
-            text-align: center;
-            padding: 3px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .project {
-            background: #f9f9f9;
-            padding: 0rem;
-            margin-bottom: 0rem;
-        }
-
-
-        .project h3 {
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 1rem;
-            margin: 7px 0px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .project h3:hover {
-            background-color: var(--black);
-        }
-
-
-
-        .project-content {
-            padding: 1rem;
-            display: none;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 1s ease-out;
-        }
-
-        .project-content.show {
-            display: block;
-            max-height: 30000px;
-        }
-
-        .project-content a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .project a:hover {
-            text-decoration: underline;
-        }
-
-        .project-code {
-            background: transparent;
-            color: var(--white);
-            padding: 1rem;
-            overflow-x: auto;
-        }
-
-
-        #skills h2 {
-            margin-bottom: 0px;
-        }
-
-        .skill {
-            background: #f9f9f9;
-            padding: 0rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-header {
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 1rem;
-            margin: 7px 0px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .skill-header:hover {
-            background-color: var(--black);
-        }
-
-        .skill-content {
-            padding: 1rem;
-            display: none;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 1s ease-out;
-        }
-
-        .skill-content.show {
-            display: block;
-            max-height: 30000px;
-        }
-
-        .skill-content a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .skill a:hover {
-            text-decoration: underline;
-        }
-
-        .skill-code {
-            background: var(--black);
-            color: var(--white);
-            padding: 1rem;
-            overflow-x: auto;
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <h1>David Šimek</h1>
-        software developer
-    </header>
-
-    <nav>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-    </nav>
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Languages I know well (C, C++, Java)</h3>
-            <div class="skill-content">
-                <p>I feel most comfortable in C. It is because it is simple, explicit and statically typed language. I
-                    really like how code reads and how it works.</p>
-                <p>I am also able to effectively work with C++, both because I learned it before C and also now, when I
-                    know C, it feels even easier.</p>
-                <p>Java is also one of these languages, because I learned it in school and had to learn it to have good
-                    grades. For me, it is not the best language in the world, but is really interesting in some aspects
-                    and has special place in my hearth.</p>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Music guide">Davids Music guide</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Music guide">Davids Music guide</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Languages I know a bit (Haskell, Fasm,
-                Nasm, JS, PHP, C#, Rust, Fortran)</h3>
-            <div class="skill-content">
-                <p>There are some languages I know some parts of. These are Haskell, Fasm, Nasm, JS, PHP, C#, Rust and
-                    Fortran.</p>
-                <p>C# is one I also learned in school, but never really liked it.</p>
-                <p>Fasm and Nasm Are languages, which I played with to better understand how c and generally memory
-                    management works.</p>
-                <p>I feel like everyone should know at least a bit about php and js, because they are still ones of the
-                    most used ones. I always thought it is interesting how close they are under the hood even though
-                    they have completely different purpose.</p>
-                <p>Rust, Fortran and Haskell are languages I learned just for fun and to understand foreign concepts.
-                    All of those three have some really interesting features which helped me to get broader view on some
-                    problems and how to solve them.</p>
-            </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="single">
+                <div class="content" id="content"><h2 id="what-is-this">What is this?</h2>
+<figure class="text-center"><img src="/fretboard.jpeg">
+</figure>
+
+<p>This guide will teach you how to understand music concepts that will help you <strong>improvise</strong> and <strong>experiment</strong> with music creation using any instrument. I will use mostly guitar to showcase this, but it applies everywhere. We will talk about <strong>intervals</strong>, <strong>scales</strong>, <strong>chords</strong>, <strong>rhythm</strong>, <strong>composition</strong> and much more.</p>
+<p>Will will be using so called &ldquo;<strong>western music theory</strong>&rdquo;, which is probably 99% of music you ever heard. You don&rsquo;t have to worry about this, but it is always nice to check other views on music.</p>
+</div>
+            </div><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/scales/">What notes we use and what are scales?</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>David Šimek</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-08-30">2025-08-30</time></span></div><div class="content"><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>Warning!<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">OS</h3>
-            <div class="skill-content">
-                <p>Void Linux with i3 as my daily driver, so I know how to work with Linux.</p>
-                <p>I have basic knowledge of windows administration from school and previous use of Windows.</p>
-            </div>
+        <div class="details-content">
+            <div class="admonition-content">This chapter contains many terms and you don&rsquo;t have to remember them all, the point is that when you hear some of these in future, you will think <strong>&ldquo;Hmm, I heard this somewhere before &hellip;&rdquo;</strong></div>
         </div>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Networking</h3>
-            <div class="skill-content">
-                <p>Networking classes in high school made me interested in networking. I like to read protocol
-                    documentation and find out why we use them and how they work.</p>
-            </div>
+    </div>
+<h1 id="how-does-sound-work">How does sound work?</h1>
+<p>You can look at sound like vibrations of air. The most simple sound from music viewpoint is <strong>sine wave</strong>. Sine wave looks like this:</p></div><div class="post-footer">
+        <a href="/posts/scales/">Read More</a></div>
+</article></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span>&nbsp;|&nbsp;<span class="license">David Šimek</span></div>
         </div>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Development tools</h3>
-            <div class="skill-content">
-                <p>I like to keep my toolchain pretty basic, so it usually consists of Neovim, gcc, make and Github.
-                </p>
-                <p>I have experience with Docker and Gitlab from previous job and project we worked on with my friend.
-                </p>
-                <p>Before switching to text editor with external tools, I used IntelliJ IDEA, Visual Studio, Visual
-                    Studio
-                    Code and Arduino IDE</p>
-                <p>Sometimes I use Compiler Explorer to see how are things done in background.</p>
-            </div>
-        </div>
-        <div class="skill">
-            <h3 class="skill-header" onclick="toggleSkill(this)">Web development</h3>
-            <div class="skill-content">
-                <p>I don't like web development, simply because I don't enjoy it. I know most used parts of html and
-                    css.</p>
-            </div>
-        </div>
-    </section>
+    </footer></div>
 
-    <script>
-        function toggleSkill(element) {
-            var content = element.nextElementSibling;
-            if (content.classList.contains("show")) {
-                content.classList.remove("show");
-                setTimeout(function () {
-                    content.style.display = "none";
-                }, 500); // Match this timeout with your transition duration
-            } else {
-                content.style.display = "block";
-                setTimeout(function () {
-                    content.classList.add("show");
-                }, 10); // Small delay to allow display change to take effect
-            }
-        }
-    </script>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                Stable diffusion webui docker setup
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/stable_diffusion_webui_docker_setup" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>Stable Diffusion Webui docker setup</h4>
-                <p>This project lets you run docker container specifically for Stable Diffusion Webui. It runs server,
-                    that is accessible from host system.</p>
-                <p>It runs fully on your machine.</p>
-            </div>
-        </div>
-
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                Hal 0.009
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/hal0.009" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>Virtual machine in C</h4>
-                <p>8-bit Virtual machine with its own instruction set and assembler.</p>
-                <p>Write code in my assembly language hasm.</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Fshowcase.hasm&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-                <p>Assemble it.</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Fassemble.sh&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-                <p>Run using virtual machine.</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Frun.sh&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-                <p>You can see register dump after machine exits.</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fhal0.009%2Fblob%2Fmaster%2Fgithub_showcase%2Fshowcase.sh&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                c debugging allocator
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/debug_alloc" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>C memory tracking library</h4>
-                <p>The Debug Allocator Library (debug_alloc) is a lightweight C library for debugging memory allocation
-                    in C programs. It provides functions for tracking memory allocation and deallocation, as well as
-                    debugging information for easier identification of memory-related issues.</p>
-                <p>header file/api:</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2Fdebug_alloc%2Fblob%2Fmaster%2Fsrc%2Fdebug_alloc.h&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                Markup Interactive Lanugage Format
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/MarkupInteractiveLanguageFormat" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>Haskell implementation of my markup language as high school graduation project</h4>
-                <p>Simple markup language usable by non-developers.</p>
-                <p>Project contains transpiler to html, live preview system and C api.</p>
-                <p>You can write something like this:</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FdavidSimek.github.io%2Fblob%2Fmain%2Fmarkup-showcase.txt&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-                <p>and get out this:</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FdavidSimek.github.io%2Fblob%2Fmain%2Fhtml-showcase.html&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-                </div>
-                <p>which then looks like this:</p>
-
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 30px Arial, sans-serif;">
-                    Showcase</div>
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 20px Arial, sans-serif;">
-                    What can it do?</div>
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 15px Arial, sans-serif;">
-                    It can transpile this syntax into html.</div>
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 20px Arial, sans-serif;">
-                    Is it all?</div>
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 15px Arial, sans-serif;">
-                    You can also use dolar sign to end text.</div>
-                <div
-                    style="background-color: rgba(0, 0, 0, 0.0); color: rgba(0, 0, 0, 1.0); margin: 10px 0px; padding: 0px 0px; font: 15px Arial, sans-serif;">
-                    Like this.</div>
-
-            </div>
-        </div>
-        <div class="project">
-            <h3 onclick="toggleProject(this)">
-                MLI
-            </h3>
-            <div class="project-content">
-                <a href="https://github.com/davidSimek/MLI" target="_blank">
-                    Github Link&nbsp;<i class="fa fa-github"></i>
-                </a>
-
-                <h4>Implementation of simple problems in few languages</h4>
-                <p>I implemented some small exercises in:</p>
-                C,
-                C++,
-                Fortran,
-                Java,
-                Haskell,
-                Rust,
-                Nasm x86_64 Linux,
-                Fasm x86_64 Linux,
-                <p>For example, here is implementation of random number generator in fortran. It generates random
-                    number and prints it is ascii art.</p>
-                <div class="project-code">
-                    <script
-                        src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FdavidSimek%2FMLI%2Fblob%2Fmaster%2FFortran%2F02%2Fmain.f90&style=felipec&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cv">
-        <h2>CV</h2>
-        <a href="David Šimek.pdf" download>Download CV</a>
-        <iframe src="David Šimek.pdf" title="CV"></iframe>
-    </section>
-
-    <section id="spacer">
-        <p>&nbsp;&nbsp;<i class="fa fa-envelope"></i>: <a
-                href="mailto:simek.david@outlook.cz">simek.david@outlook.cz</a>&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;<i class="fa fa-phone"></i> <a href="tel:+420-739-038-083">+420 739 038 083</a>&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;<i class="fa fa-github"></i> <a href="https://github.com/davidSimek">davidSimek</a>&nbsp;&nbsp;
-        </p>
-        <p>&nbsp;&nbsp;<i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;<a
-                href="https://www.linkedin.com/in/david-%C5%A1imek-032724211/">David
-                Šimek</a>
-        </p>
-    </section>
-
-
-    <footer>
-        <p>&nbsp;&nbsp;<i class="fa fa-envelope"></i> <a
-                href="mailto:simek.david@outlook.cz">simek.david@outlook.cz</a>&nbsp;
-        </p>
-        <p>&nbsp;&nbsp;<i class="fa fa-phone"></i> <a href="tel:+420-739-038-083">+420 739 038 083</a>&nbsp;</p>
-        <p>&nbsp;&nbsp;<i class="fa fa-github"></i> <a href="https://github.com/davidSimek">davidSimek</a>&nbsp;</p>
-        <p>&nbsp;&nbsp;<i class="fa fa-linkedin-square"></i> <a
-                href="https://www.linkedin.com/in/david-%C5%A1imek-032724211/">David
-                Šimek</a></p>
-    </footer>
-
-
-    <script>
-        function toggleProject(element) {
-            var content = element.nextElementSibling;
-            if (content.classList.contains("show")) {
-                content.classList.remove("show");
-                setTimeout(function () {
-                    content.style.display = "none";
-                }, 500); // Match this timeout with your transition duration
-            } else {
-                content.style.display = "block";
-                setTimeout(function () {
-                    content.classList.add("show");
-                }, 10); // Small delay to allow display change to take effect
-            }
-        }
-
-    </script>
-
-</body>
-
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,0 +1,9 @@
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://localhost/</loc><lastmod>2025-08-30T15:24:23&#43;02:00</lastmod></url><url>
+            <loc>http://localhost/posts/</loc><lastmod>2025-08-30T15:24:23&#43;02:00</lastmod></url><url>
+            <loc>http://localhost/posts/scales/</loc><lastmod>2025-08-30T15:24:23&#43;02:00</lastmod></url><url>
+            <loc>http://localhost/categories/</loc></url><url>
+            <loc>http://localhost/tags/</loc></url></urlset>
