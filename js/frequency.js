@@ -51,31 +51,33 @@ window.addEventListener("load", function() {
         ctx.stroke();
       });
 
-      // Summed waveform
-      let ySumArray = [];
-      for(let x = 0; x <= width; x++) {
-        const t = (x / width) * timeWindow;
-        let ySum = 0;
-        freqs.forEach(freq => {
-          const amplitude = scaleFactor; // each occurrence contributes scaleFactor
-          ySum += Math.sin(2 * Math.PI * freq * t) * amplitude;
-        });
-        ySumArray.push(centerY - ySum);
+      // Only draw summed waveform if there are 2 or more unique frequencies
+      if(uniqueFreqs.length > 1) {
+        let ySumArray = [];
+        for(let x = 0; x <= width; x++) {
+          const t = (x / width) * timeWindow;
+          let ySum = 0;
+          freqs.forEach(freq => {
+            const amplitude = scaleFactor; // each occurrence contributes scaleFactor
+            ySum += Math.sin(2 * Math.PI * freq * t) * amplitude;
+          });
+          ySumArray.push(centerY - ySum);
+        }
+
+        // Draw black border of sum
+        ctx.beginPath();
+        ctx.lineWidth = 7;
+        ctx.strokeStyle = "#000000";
+        ySumArray.forEach((y, x) => x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y));
+        ctx.stroke();
+
+        // Draw white sum line
+        ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "#FFFFFF";
+        ySumArray.forEach((y, x) => x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y));
+        ctx.stroke();
       }
-
-      // Draw black border of sum
-      ctx.beginPath();
-      ctx.lineWidth = 7;
-      ctx.strokeStyle = "#000000";
-      ySumArray.forEach((y, x) => x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y));
-      ctx.stroke();
-
-      // Draw white sum line
-      ctx.beginPath();
-      ctx.lineWidth = 5;
-      ctx.strokeStyle = "#FFFFFF";
-      ySumArray.forEach((y, x) => x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y));
-      ctx.stroke();
 
       // Responsive timeline font
       const fontSize = Math.max(10, width / 40); // scales with canvas width
@@ -112,15 +114,18 @@ window.addEventListener("load", function() {
           legendDiv.appendChild(span);
         });
 
-        const sumSpan = document.createElement("span");
-        sumSpan.style.display = "inline-block";
-        sumSpan.style.marginLeft = "10px";
-        sumSpan.style.color = "#FFFFFF";
-        sumSpan.style.textShadow = "0 0 1px #000000";
-        sumSpan.style.fontWeight = "bold";
-        sumSpan.style.fontSize = `${Math.max(12, width / 50)}px`;
-        sumSpan.textContent = "sum";
-        legendDiv.appendChild(sumSpan);
+        // Only show "sum" in legend if there are multiple frequencies
+        if(uniqueFreqs.length > 1) {
+          const sumSpan = document.createElement("span");
+          sumSpan.style.display = "inline-block";
+          sumSpan.style.marginLeft = "10px";
+          sumSpan.style.color = "#FFFFFF";
+          sumSpan.style.textShadow = "0 0 1px #000000";
+          sumSpan.style.fontWeight = "bold";
+          sumSpan.style.fontSize = `${Math.max(12, width / 50)}px`;
+          sumSpan.textContent = "sum";
+          legendDiv.appendChild(sumSpan);
+        }
       }
 
     } catch(e) {
@@ -128,4 +133,3 @@ window.addEventListener("load", function() {
     }
   });
 });
-

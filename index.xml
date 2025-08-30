@@ -6,7 +6,7 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 30 Aug 2025 15:24:23 &#43;0200</lastBuildDate>
             <atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>What notes we use and what are scales?</title>
+    <title>What even is sound and how does it relate to music?</title>
     <link>http://localhost/posts/scales/</link>
     <pubDate>Sat, 30 Aug 2025 15:24:23 &#43;0200</pubDate>
     <author>David Šimek</author>
@@ -19,7 +19,7 @@
             <div class="admonition-content">This chapter contains many terms and you don&rsquo;t have to remember them all, the point is that when you hear some of these in future, you will think <strong>&ldquo;Hmm, I heard this somewhere before &hellip;&rdquo;</strong></div>
         </div>
     </div>
-<h1 id="how-does-sound-work">How does sound work?</h1>
+<h2 id="how-does-sound-work">How does sound work?</h2>
 <p>You can look at sound like vibrations of air. The most simple sound from music viewpoint is <strong>sine wave</strong>. Sine wave looks like this:</p>]]></description>
 </item>
 </channel>
