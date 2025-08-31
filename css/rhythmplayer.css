@@ -1,0 +1,11 @@
+.rhythm-player {
+  margin: 1em 0;
+}
+.rhythm-player canvas {
+  width: 100%;
+  display: block;
+}
+.rhythm-player audio {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
